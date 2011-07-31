@@ -1,4 +1,12 @@
 <h1>face vs nickname</h1>
+<div>
+  <% if (session[:id].nil?) %>
+    <%= link_to(image_tag("var-popupwindow-window.gif"), "auth/facebook") %>
+  <% else %>
+    <%= link_to "Editar", :action=>"edit" %>
+    <%= link_to "Logout", :action=>"logout" %>
+  <% end %>
+<div>
 
 <div id="results" class="nav-container">
 	<%= render(:partial => "user", :collection => @users) %> 
@@ -6,5 +14,4 @@
 
 <%= will_paginate(@users) %> <%= pageless(@users.total_pages, '/users/') %>
 <br/>
-<%= link_to "Sign in with Facebook", "auth/facebook" %>
 

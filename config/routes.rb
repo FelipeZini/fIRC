@@ -2,6 +2,7 @@ FIRC::Application.routes.draw do
 
   match 'users', :to => 'users#index'
   match 'users/edit', :to => 'users#edit'
+  match 'users/logout', :to => 'users#logout'
   match 'users/edit_nick', :to => 'users#edit_nick'
   match '/auth/:provider/callback', :to => 'users#facebook_login'
 
