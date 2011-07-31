@@ -1,7 +1,78 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
-*/
+body, div, dl, li, dt, dd, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #6E6E6E;
+    font: 12px/24px "Lucida Grande",helvetica,verdana,sans-serif;
+}
+
+img {
+    border: medium none;
+}
+
+.nav-container {
+   /* background: url("/media/img/foundation/nav_bg.gif") no-repeat scroll 0 73px transparent;
+    height: 617px; */
+    border: 2px solid #f2eded;
+    left: 0;
+    top: 30px;
+    width: 300px;
+}
+
+.checkout_logo {
+    margin-bottom: 20px;
+    margin-top: 1px;
+}
+
+.alternate {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-bottom: 1px solid #F8F8F8;
+    border-top: 1px solid #F8F8F8;
+}
+
+.nav-button:hover {
+    background: none repeat scroll 0 0 #E5F1FA;
+    border: 1px solid #A8B4BE;
+    margin: 0 1px;
+}
+
+.nav-button {
+    margin-left: 2px; 
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    cursor: pointer;
+    font-size: 0.8em;
+    height: 53px;
+    margin: 0 2px;
+    padding: 10px 20px;
+    width: 256px;
+}
+
+.nav-button h2 {
+    color: #2C2B2B;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-shadow: 0 0 1px white;
+    margin: 4px 0 0 50px;
+}
+
+.nav-button a.view-profile {
+    line-height: 1.5em;
+    margin-top: 15px;
+    float:right;
+    display: block;
+}
+
+
+.nav-button img {
+    float: left;
+    margin: 0px 0 0;
+}
+
+.nav-button p {
+    line-height: 1.5em;
+    margin: 0 0 0 50px;
+}
+

@@ -1,25 +1,16 @@
-<h1>Listing users</h1>
+<h1>face vs nickname</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Picture</th>
-    <th>Nick</th>
-    <th>Uid</th>
-    <th></th>
-  </tr>
-
+<div class="nav-container">
 <% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= user.email %></td>
-    <td><%= user.picture %></td>
-    <td><%= user.nick %></td>
-    <td><%= user.uid %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
+			<div class="nav-button <%= cycle("", "alternate", :name => "row_class") -%>">
+				<img  style="margin-left:-3px" alt="<%= user.name %>_picture" src="<%= user.picture %>">
+				<h2><%= user.nick  %></h2>
+				<p>Also knowns as <%= user.name %>
+				<a class="view-profile" href="http://www.facebook.com/profile.php?id=<%= user.uid %>">visit profile</a>
+			</div>
+<% end %>
+</div>
+
 <%= link_to "Sign in with Facebook", "auth/facebook" %>
+
