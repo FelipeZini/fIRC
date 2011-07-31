@@ -1,0 +1,7 @@
+<div class="nav-button <%= cycle("", "alternate", :name => "row_class") -%>">
+	<img  style="margin-left:-3px" alt="<%= user.name %>_picture" src="<%= user.picture %>">
+	<h2><%= user.nick  %></h2>
+	<p>Also known as <%= user.name %>
+	<a class="view-profile" href="http://www.facebook.com/profile.php?id=<%= user.uid %>">visit profile</a>
+</div>
+

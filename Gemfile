@@ -7,6 +7,7 @@ gem 'rails', '3.1.0.rc5'
 
 gem 'sqlite3'
 gem 'omniauth'
+gem "will_paginate", "~> 3.0.pre2"
 
 # Gems used only for assets and not required
 # in production environments by default.

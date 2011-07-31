@@ -3,8 +3,11 @@ class UsersController < ApplicationController
   before_filter :logged?, :only=>[:edit,:edit_nick]
 
   def index
-    @users = User.all
-    respond_with @users
+    @users = User.paginate(:page => params[:page], :per_page => 10)
+    if request.xhr? 
+      sleep(5)
+      render :partial => @users
+    end
   end
 
   def logout

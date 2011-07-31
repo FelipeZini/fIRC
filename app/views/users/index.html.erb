@@ -1,16 +1,10 @@
 <h1>face vs nickname</h1>
 
-<div class="nav-container">
-<% @users.each do |user| %>
-
-			<div class="nav-button <%= cycle("", "alternate", :name => "row_class") -%>">
-				<img  style="margin-left:-3px" alt="<%= user.name %>_picture" src="<%= user.picture %>">
-				<h2><%= user.nick  %></h2>
-				<p>Also knowns as <%= user.name %>
-				<a class="view-profile" href="http://www.facebook.com/profile.php?id=<%= user.uid %>">visit profile</a>
-			</div>
-<% end %>
+<div id="results" class="nav-container">
+	<%= render(:partial => "user", :collection => @users) %> 
 </div>
 
+<%= will_paginate(@users) %> <%= pageless(@users.total_pages, '/users/') %>
+<br/>
 <%= link_to "Sign in with Facebook", "auth/facebook" %>
 
