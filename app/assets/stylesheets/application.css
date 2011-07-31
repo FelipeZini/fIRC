@@ -13,17 +13,10 @@ img {
 }
 
 .nav-container {
-   /* background: url("/media/img/foundation/nav_bg.gif") no-repeat scroll 0 73px transparent;
-    height: 617px; */
     border: 2px solid #f2eded;
     left: 0;
     top: 30px;
     width: 300px;
-}
-
-.checkout_logo {
-    margin-bottom: 20px;
-    margin-top: 1px;
 }
 
 .alternate {
@@ -64,7 +57,6 @@ img {
     float:right;
     display: block;
 }
-
 
 .nav-button img {
     float: left;
