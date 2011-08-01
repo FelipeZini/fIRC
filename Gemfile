@@ -2,16 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc5'
 
-group :development do
-  gem 'sqlite3'
-end
-
-group :production do
- gem 'pg'
-end
- 
 group :test do
- gem 'sqlite3'
  gem 'turn', :require => false
 end
  
@@ -22,6 +13,8 @@ end
 gem 'omniauth'
 gem "will_paginate", "~> 3.0.pre2"
 gem 'rake', '0.8.7'
+gem 'pg', :group => :production
+gem 'sqlite3', :group => :development
 
 # Gems used only for assets and not required
 # in production environments by default.
