@@ -1,6 +1,14 @@
-<h1>Editing user</h1>
-
-<%= render 'form' %>
+<div class="content">
+  <center><h1>Editing User</h1></center>
+  <center><h3>Yes, that's you...<h3></center>
+  <div class="nav-button">
+        <img  style="margin-left:-3px" alt="<%= @user.name %>_picture" src="<%= @user.picture %>">
+        <h2><%= @user.nick  %></h2>
+        <p>Also known as <%= @user.name %>
+        <a class="view-profile" href="http://www.facebook.com/profile.php?id=<%= @user.uid %>">visit profile</a>
+  </div>
+  <%= render 'form' %>
+</div>
 
 
 

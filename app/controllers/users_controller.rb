@@ -3,11 +3,23 @@ class UsersController < ApplicationController
   before_filter :logged?, :only=>[:edit,:edit_nick]
 
   def index
-    @users = User.paginate(:page => params[:page], :per_page => 10)
+    @users = User.paginate(:page => params[:page], :per_page => 10).order(:name)
+    @totalusers = User.count
     if request.xhr? 
-      sleep(5)
       render :partial => @users
     end
+    if (!session[:id].nil?)
+      @user = User.find(session[:id])
+    end
+  end
+
+  def search
+    @users = User.paginate(:page=>params[:page], :per_page=> 10).where(["nick=?",params[:search_text]]).order(:name)
+    @totalusers = User.count
+    if (!session[:id].nil?)
+      @user = User.find(session[:id])
+    end
+    render "index"
   end
 
   def logout

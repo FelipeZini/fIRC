@@ -5,14 +5,34 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application", "jquery.pageless.js" %>
   <%= csrf_meta_tags %>
-
- <style type="text/css">
-
- </style>
-
-
 </head>
 <body>
-	<%= yield %>
+  <div id="content-master">
+    <div class="content">
+      <div>
+        <% if (session[:id].nil?) %>
+          <p>Sign-in with</p>
+          <%= link_to(image_tag("var-popupwindow-window.gif"), "auth/facebook") %>
+        <% else %>
+          <p>Hello, <%= @user.name %> !</p>
+          <%= link_to "Edit", :action=>"edit" %>
+          <%= link_to "Logout", :action=>"logout" %>
+        <% end %>
+          <br />
+          <br />
+          <%= render(:partial => "search") %>
+      </div>
+  </div>
+
+  <%= yield %>
+
+  <div class="content">
+    <p>Total users: <%= @totalusers %></p>
+    <p>Ugly? <%= link_to "See MVP", "http://en.wikipedia.org/wiki/Minimum_viable_product" %> or</p>
+    <p>fork it on <%= link_to "Github", "http://github.com/FelipeZini/fIRC" %></p>
+    <p>Development by <%= link_to "Lithium--", "http://about.me/FelipeZini" %> and <%= link_to "O'MaDMiNd", "http://about.me/LuizFreneda" %></p>
+    <p>Built with Ruby On Rails</p>
+   </div>
+  </div>
 </body>
 </html>

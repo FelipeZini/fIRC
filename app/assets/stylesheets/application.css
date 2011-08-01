@@ -19,8 +19,9 @@ img {
 
 .content {
   float: left;
-  border: 1px solid black;
   width: 300px;
+  height: 100%;
+  text-align:center;
 }
 
 .nav-container {

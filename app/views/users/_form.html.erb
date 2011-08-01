@@ -10,24 +10,12 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= @user.name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= @user.email %>
-  </div>
-  <div class="field">
-    <%= f.label :picture %><br />
-    <img alt="<%= @user.name %>" src="<%= @user.picture %>" />
-  </div>
   <div class="field">
     <%= f.label :nick %><br />
     <%= f.text_field :nick %>
   </div>
   <div class="actions">
     <%= f.submit %>
+    <%= link_to "Back", users_path %>
   </div>
 <% end %>

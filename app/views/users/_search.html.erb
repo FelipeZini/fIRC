@@ -1,0 +1,12 @@
+<h1>Search:</h1>
+<%= form_for :user, :url => { :action => "search" } do |f| %>
+  <div class="field">
+    Nick:
+  </div>
+  <div class="field">
+    <input type="text" id="search_nick" name="search_text" />
+  </div>
+  <div>
+    <input type="submit" value="Search" id="search" />
+  </div>
+<% end %>
