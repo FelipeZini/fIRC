@@ -1,12 +1,12 @@
 <div id="results" class="content nav-container" style="float:left">
   <center><h1>mIRC Rio Preto</h1></center>
-  <% if (@users.count > 1) %>
-    <%= render(:partial => "user", :collection => @users) %> 
-  <% else %>
-    <p>Nick not found!</p>
-    <p>You must type the nickname complete</p>
-    <p>Ex: O`MaDMiNd or Lithium--</p>
-  <% end %>
+    <% if (@users.count > 0) %>
+      <%= render(:partial => "user", :collection => @users) %> 
+    <% else %>
+      <p>Nick not found!</p>
+      <p>You must type the nickname complete</p>
+      <p>Ex: O`MaDMiNd or Lithium--</p>
+    <% end %>
 </div>
   <%= will_paginate(@users) %> <%= pageless(@users.total_pages, '/users/') %>
 <br/>

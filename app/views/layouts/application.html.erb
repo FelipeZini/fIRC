@@ -10,9 +10,10 @@
   <div id="content-master">
     <div class="content">
       <div>
+        <%= link_to(image_tag("logo.png", :size => "156x156", :alt=> "mIRC Rio-Preto"), "http://www.facebook.com/groups/mircriopreto") %>
         <% if (session[:id].nil?) %>
           <p>Sign-in with</p>
-          <%= link_to(image_tag("var-popupwindow-window.gif"), "auth/facebook") %>
+          <%= link_to(image_tag("var-popupwindow-window.gif", "Login"), "auth/facebook") %>
         <% else %>
           <p>Hello, <%= @user.name %> !</p>
           <%= link_to "Edit", :action=>"edit" %>
