@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    @users = User.paginate(:page=>params[:page], :per_page=> 10).where(["nick=?",params[:search_text]]).order(:name)
+    @users = User.where(["nick=?",params[:search_text]]).paginate(:page => params[:page], :per_page => 1).order(:name)
     @totalusers = User.count
     if (!session[:id].nil?)
       @user = User.find(session[:id])
