@@ -14,6 +14,11 @@ gem 'omniauth'
 gem "will_paginate", "~> 3.0.pre2"
 gem 'rake', '0.8.7'
 
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+  gem 'pg'
+end
+
 gem 'sqlite3', :group => :development
 
 # Gems used only for assets and not required
