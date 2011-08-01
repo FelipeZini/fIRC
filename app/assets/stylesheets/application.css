@@ -58,7 +58,8 @@ img {
     font-size: 1.4em;
     font-weight: bold;
     text-shadow: 0 0 1px white;
-    margin: 4px 0 0 50px;
+    margin: 4px 0 0 50px; 
+    text-align: left;
 }
 
 .nav-button a.view-profile {
