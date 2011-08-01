@@ -2,10 +2,23 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc5'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+group :development do
+  gem 'sqlite3'
+end
 
-gem 'sqlite3'
+group :production do
+ gem 'pg'
+end
+ 
+group :test do
+ gem 'sqlite3'
+ gem 'turn', :require => false
+end
+ 
+# Bundle edge Rails instead:
+# grequire 'rake/dsl_definitioneem 'rails',     :giit => 'git://github.com/rails/rails.git'
+require 'rake/dsl_definition'
+
 gem 'omniauth'
 gem "will_paginate", "~> 3.0.pre2"
 gem 'rake', '0.8.7'
@@ -29,7 +42,3 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
-end
