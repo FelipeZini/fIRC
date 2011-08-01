@@ -121,7 +121,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
-    rake (0.9.2)
+    rake (0.8.7)
     rdoc (3.9)
     rest-client (1.6.3)
       mime-types (>= 1.16)
@@ -151,6 +151,7 @@ DEPENDENCIES
   jquery-rails
   omniauth
   rails (= 3.1.0.rc5)
+  rake (= 0.8.7)
   sqlite3
   turn
   will_paginate (~> 3.0.pre2)
