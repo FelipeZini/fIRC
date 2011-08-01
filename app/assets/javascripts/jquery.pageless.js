@@ -63,7 +63,7 @@
                  , pagination: '.pagination'
                  , params: {}
                  , url: location.href
-                 , loaderImage: "assets/load.gif"
+                 , loaderImage: "images/load.gif"
 		 }
     , container
     , $container;
