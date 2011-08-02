@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :logged?, :only=>[:edit,:edit_nick]
 
   def index
-    @users = User.paginate(:page => params[:page], :per_page => 10).order(:nick)
+    @users = User.paginate(:page => params[:page], :per_page => 10).order("id desc")
     @totalusers = User.count
     if request.xhr? 
       render :partial => @users
