@@ -13,7 +13,7 @@
         <%= link_to(image_tag("logo.png", :size => "156x156", :alt=> "mIRC Rio-Preto"), "http://www.facebook.com/groups/mircriopreto") %>
         <% if (session[:id].nil?) %>
           <p>Sign-in with</p>
-          <%= link_to(image_tag("var-popupwindow-window.gif", "Login"), "auth/facebook") %>
+          <%= link_to(image_tag("var-popupwindow-window.gif", :alt=> "Login"), "auth/facebook") %>
         <% else %>
           <p>Hello, <%= @user.name %> !</p>
           <%= link_to "Edit", :action=>"edit" %>
@@ -44,6 +44,11 @@ Temos uma lista de organizações de nicks no grupo, unico problema é que lá, 
     <p>Development by <%= link_to "Lithium--", "http://about.me/FelipeZini" %> and <%= link_to "O'MaDMiNd", "http://about.me/LuizFreneda" %></p> 
     <p>Built with Ruby On Rails</p>
     <br />
+    <p>Design by (your name here)</p>
+	<p>
+ 	  Monte um layout bonito para o firc.heroku.com e ganhe seu nome aqui (':
+	 <br /> :: lfreneda@gmail.com or felipe.zini@gmail.com
+        </p>
     <br />
 <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=226193220755732&amp;xfbml=1"></script><fb:like href="http://firc.heroku.com" send="false" width="250" show_faces="true" font="lucida grande"></fb:like>
 
